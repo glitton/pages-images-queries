@@ -1,11 +1,25 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
+
+import "../styles/main.css";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>Welcome to this Gatsby and Later Session</h1>
-      <p>We are here to learn about graphQL and Gatsby!</p>
+      <h1>Welcome Linktree</h1>
+      <p>
+        We are here to learn about creating pages progrmatically, adding images,
+        and graphQL in Gatsby
+      </p>
+      <div className="logos">
+        <StaticImage
+          src="../images/linktree.png"
+          alt="linktree logo"
+          placeholder="blurred"
+          loading="eager"
+        />
+      </div>
     </Layout>
   );
 };

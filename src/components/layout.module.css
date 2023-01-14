@@ -16,5 +16,11 @@
   padding-right: 2rem;
 }
 .nav-link-text {
-  color: black;
+  color: blue;
+}
+
+.site-title {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 700;
 }
