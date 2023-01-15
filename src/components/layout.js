@@ -1,5 +1,5 @@
 import * as React from "react";
-import Navigation from "./navigation";
+import NavBar from "./navbar";
 import { useStaticQuery, graphql } from "gatsby";
 import { container, heading, siteTitle } from "./layout.module.css";
 
@@ -21,7 +21,7 @@ const Layout = ({ pageTitle, children }) => {
   } = useStaticQuery(getData);
   return (
     <div className={container}>
-      <Navigation />
+      <NavBar />
       <title>
         {pageTitle} | {title}
       </title>

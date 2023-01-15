@@ -1,16 +1,15 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/layout";
 
 import "../styles/main.css";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <main>
       <h1>Welcome Linktree</h1>
       <p>
         We are here to learn about creating pages progrmatically, adding images,
-        and graphQL in Gatsby
+        and using graphQL in Gatsby
       </p>
       <div className="logos">
         <StaticImage
@@ -20,7 +19,7 @@ const IndexPage = () => {
           loading="eager"
         />
       </div>
-    </Layout>
+    </main>
   );
 };
 

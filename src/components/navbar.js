@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { navLinks, navLinkItem, navLinkText } from "./layout.module.css";
 
-const Navigation = () => {
+const NavBar = () => {
   return (
     <nav>
       <ul className={navLinks}>
@@ -21,9 +21,14 @@ const Navigation = () => {
             Blogs
           </Link>
         </li>
+        <li className={navLinkItem}>
+          <Link to="/articles" className={navLinkText}>
+            Articles
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 };
 
-export default Navigation;
+export default NavBar;
