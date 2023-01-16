@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         index === articles.length - 1 ? null : articles[index + 1].id;
 
       createPage({
-        path: article.slug,
+        path: `articles/${article.slug}`,
         component: articleTemplate,
         context: {
           id: article.id,

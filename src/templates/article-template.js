@@ -1,13 +1,28 @@
 import React from "react";
+// import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ArticleTemplate = ({ data }) => {
-  // console.log("this are data props", data);
   const articles = data.allContentfulArticles.nodes;
   return (
     <main className="page">
-      <h2>something goes here</h2>
-      <div className="tag-recipes"></div>
+      {articles.map((article) => {
+        const { title, author, body, heroImage } = article;
+        const image = getImage(heroImage);
+        return (
+          <main className="page">
+            <h3>{title}</h3>
+            <GatsbyImage image={image} alt={author} />
+            <h4>
+              {author.name}, {author.title} {author.createdAt}
+            </h4>
+            {/* <p>{documentToPlainTextString(body.raw)}</p>
+             */}
+            <p>{body.raw}</p>
+          </main>
+        );
+      })}
     </main>
   );
 };

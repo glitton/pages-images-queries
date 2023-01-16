@@ -3,3 +3,14 @@
   justify-content: center;
   padding: 10px;
 }
+
+.list {
+  display: grid;
+  gap: 2rem 1rem;
+  padding-bottom: 3rem;
+}
+
+.articles-container .blog-container {
+  display: grid;
+  gap: 2rem 1rem;
+}

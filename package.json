@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^16.0.2",
     "gatsby": "^5.4.1",
     "gatsby-plugin-image": "^3.4.0",
     "gatsby-plugin-sharp": "^5.4.0",
