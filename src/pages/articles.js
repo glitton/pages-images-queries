@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-// import ArticleList from "../components/article-list";
 
 const Articles = ({ data }) => {
   const articleList = data.allContentfulArticles.nodes;
@@ -39,4 +38,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default Articles;

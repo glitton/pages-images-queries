@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ArticleTemplate = ({ data }) => {
+  // console.log(data);
   const articles = data.allContentfulArticles.nodes;
   return (
     <main className="page">
@@ -20,6 +21,30 @@ const ArticleTemplate = ({ data }) => {
             {/* <p>{documentToPlainTextString(body.raw)}</p>
              */}
             <p>{body.raw}</p>
+            {/* <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul> */}
           </main>
         );
       })}
@@ -36,6 +61,7 @@ export const query = graphql`
       nodes {
         title
         id
+        slug
         body {
           raw
         }
